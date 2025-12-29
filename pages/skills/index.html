@@ -4,77 +4,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UrbanOraTech - All Skills</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/roadmap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Roadmaps | UrbanOraTech</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Explore structured learning roadmaps for AI, Web Development, Data Science, Cybersecurity, and more future-ready skills.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/roadmap.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo/favicon.ico">
 </head>
 <body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
 
-<!-- Header -->
-<div id="header"></div>
-<script>
-fetch('/components/header.html')
-  .then(res => res.text())
-  .then(data => document.getElementById('header').innerHTML = data);
-</script>
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Skills <span class="gradient-text">Roadmaps</span></h1>
+                <p>Master in-demand tech skills with structured learning paths, resources, and project guides.</p>
+                
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="skillSearch" placeholder="Search skills...">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="skills-hero">
-  <div class="container">
-    <h1>All Skills & Roadmaps</h1>
-    <p>Explore high-paying tech skills and learn how to build a career in each.</p>
-  </div>
-</section>
+    <!-- Skills Filter -->
+    <section class="skills-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="ai-ml">AI & Machine Learning</button>
+                <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="cyber">Cybersecurity</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                <button class="filter-btn" data-filter="design">Design & UX</button>
+            </div>
+        </div>
+    </section>
 
-<!-- Skills Cards Grid -->
-<section class="skills-grid-section">
-  <div class="container skills-grid">
-    
-    <a href="/pages/skills/ai-engineer.html" class="skill-card">
-      <img src="/assets/images/skills/ai.png" alt="AI Engineer">
-      <h3>AI Engineer</h3>
-      <p>Learn AI, machine learning, and smart systems development.</p>
-    </a>
+    <!-- Skills Grid -->
+    <section class="skills-listing">
+        <div class="container">
+            <div class="all-skills-grid" id="allSkillsGrid">
+                <!-- Skills will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
 
-    <a href="/pages/skills/web-developer.html" class="skill-card">
-      <img src="/assets/images/skills/web.png" alt="Web Developer">
-      <h3>Web Developer</h3>
-      <p>Master HTML, CSS, JS, and modern web frameworks.</p>
-    </a>
+    <!-- CTA -->
+    <section class="skills-cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Can't Find Your Skill?</h2>
+                    <p>Suggest a skill roadmap you'd like to see, or contribute to existing ones.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="pages/contact.html" class="btn btn-primary">Suggest a Skill</a>
+                    <a href="#" class="btn btn-secondary">Contribute</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <a href="/pages/skills/data-analyst.html" class="skill-card">
-      <img src="/assets/images/skills/data.png" alt="Data Analyst">
-      <h3>Data Analyst</h3>
-      <p>Analyze data, visualize insights, and make smart business decisions.</p>
-    </a>
+    <!-- Footer -->
+    <div id="footer-container"></div>
 
-    <a href="/pages/skills/cybersecurity.html" class="skill-card">
-      <img src="/assets/images/skills/cyber.png" alt="Cybersecurity">
-      <h3>Cybersecurity</h3>
-      <p>Protect networks, systems, and data from cyber threats.</p>
-    </a>
-
-    <a href="/pages/skills/cloud-engineer.html" class="skill-card">
-      <img src="/assets/images/skills/cloud.png" alt="Cloud Engineer">
-      <h3>Cloud Engineer</h3>
-      <p>Build and manage cloud infrastructure for modern applications.</p>
-    </a>
-
-  </div>
-</section>
-
-<!-- Footer -->
-<div id="footer"></div>
-<script>
-fetch('/components/footer.html')
-  .then(res => res.text())
-  .then(data => document.getElementById('footer').innerHTML = data);
-</script>
-
-<script src="/assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/roadmap.js"></script>
 </body>
 </html>
+
 
 
