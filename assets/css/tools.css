@@ -1,1 +1,440 @@
 
+
+
+/* Tools Directory Specific Styles */
+
+/* Category Cards */
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--shadow);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.category-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.category-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.tool-count {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--accent-cyan);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.tool-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+}
+
+.tool-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tool-logo {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 217, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tool-logo i {
+    font-size: 1.5rem;
+    color: var(--accent-cyan);
+}
+
+.tool-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.tool-title h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.tool-category {
+    color: var(--accent-purple);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.tool-description {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.tool-features {
+    margin-bottom: 20px;
+}
+
+.tool-features h4 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tool-pricing {
+    padding: 10px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.pricing-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.pricing-free {
+    background: rgba(0, 200, 83, 0.1);
+    color: var(--success);
+}
+
+.pricing-paid {
+    background: rgba(157, 78, 221, 0.1);
+    color: var(--accent-purple);
+}
+
+.tool-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Submit Tool Card */
+.submit-tool {
+    padding: 80px 0;
+}
+
+.submit-tool-card {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.submit-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.submit-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Tool Details Page */
+.tool-detail-header {
+    padding: 140px 0 60px;
+    text-align: center;
+}
+
+.tool-detail-main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tool-detail-logo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.tool-detail-logo i {
+    font-size: 3rem;
+    color: white;
+}
+
+.tool-detail-main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.tool-detail-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.tool-detail-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.meta-item {
+    text-align: center;
+}
+
+.meta-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.meta-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.tool-detail-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tool-detail-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-cyan);
+}
+
+.content-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content-section li {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.content-section li strong {
+    color: var(--text-primary);
+}
+
+/* Alternative Tools */
+.alternative-tools {
+    margin-top: 60px;
+}
+
+.alternatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.alternative-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.alternative-card:hover {
+    border-color: var(--accent-cyan);
+}
+
+.alternative-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.alternative-logo {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 217, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alternative-logo i {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+}
+
+.alternative-title h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.alternative-category {
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+}
+
+.alternative-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-tool-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .tool-detail-meta {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .tool-detail-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tool-detail-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tool-logo {
+        margin: 0 auto 15px;
+    }
+    
+    .tool-actions {
+        flex-direction: column;
+    }
+}
+
+
+
