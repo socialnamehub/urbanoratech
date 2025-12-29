@@ -1,19 +1,21 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineer Roadmap | UrbanOraTech</title>
+    <title>AI Engineer Roadmap 2024 | Complete Learning Path | UrbanOraTech</title>
     
-    <!-- SEO Meta -->
-    <meta name="description" content="Complete AI Engineer learning roadmap: Machine Learning, Deep Learning, NLP, Computer Vision, and AI deployment.">
+    <!-- Meta Tags -->
+    <meta name="description" content="Become an AI Engineer in 2024. Complete roadmap: Machine Learning, Deep Learning, NLP, TensorFlow, PyTorch. Salary: $140k+. Start learning today.">
+    <meta name="keywords" content="ai engineer, machine learning roadmap, deep learning, artificial intelligence, ai career, tensorflow, pytorch, nlp, computer vision">
     
     <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
@@ -26,6 +28,15 @@
 <body>
     <!-- Navigation -->
     <div id="navbar-container"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../../index.html">Home</a> &gt;
+            <a href="index.html">Skills</a> &gt;
+            <span>AI Engineer</span>
+        </div>
+    </div>
 
     <!-- Roadmap Header -->
     <section class="roadmap-header">
@@ -56,7 +67,7 @@
                 </div>
                 
                 <div class="skill-actions-header">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" id="saveRoadmap">
                         <i class="fas fa-bookmark"></i> Save Roadmap
                     </button>
                     <button class="btn btn-secondary" id="printRoadmap">
@@ -70,13 +81,61 @@
             
             <div class="roadmap-progress">
                 <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-fill" id="progressFill">0%</div>
                 </div>
                 <div class="progress-labels">
                     <span>Beginner</span>
                     <span>Intermediate</span>
                     <span>Advanced</span>
                     <span>Expert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="quick-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Demand Level</h3>
+                        <div class="demand-high">Very High</div>
+                        <p>100k+ job openings worldwide</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Learning Path</h3>
+                        <div class="path-steps">4 Stages • 20+ Topics</div>
+                        <p>Structured from beginner to expert</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Industries</h3>
+                        <div class="industries">Tech, Finance, Healthcare</div>
+                        <p>High demand across sectors</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Certifications</h3>
+                        <div class="certs">Google, AWS, NVIDIA</div>
+                        <p>Industry-recognized credentials</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,53 +151,169 @@
         </div>
     </section>
 
-    <!-- Recommended Tools -->
-    <section class="recommended-tools">
+    <!-- Essential Tools -->
+    <section class="essential-tools">
         <div class="container">
             <h2 class="section-title">Essential <span class="gradient-text">AI Tools</span></h2>
-            <div class="tools-grid" id="aiToolsGrid">
-                <!-- Tools will be loaded dynamically -->
+            <p class="section-subtitle">Tools you'll need to master as an AI Engineer</p>
+            
+            <div class="tools-grid">
+                <a href="../../pages/tools/ai-tools.html" class="tool-card">
+                    <div class="tool-logo">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Python & Libraries</h3>
+                        <p>NumPy, Pandas, Scikit-learn, Matplotlib</p>
+                        <div class="tool-tags">
+                            <span class="tag">Essential</span>
+                            <span class="tag">Programming</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="../../pages/tools/ai-tools.html" class="tool-card">
+                    <div class="tool-logo">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Deep Learning Frameworks</h3>
+                        <p>TensorFlow, PyTorch, Keras</p>
+                        <div class="tool-tags">
+                            <span class="tag">Advanced</span>
+                            <span class="tag">ML</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="../../pages/tools/ai-tools.html" class="tool-card">
+                    <div class="tool-logo">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Data & Model Management</h3>
+                        <p>MLflow, DVC, Weights & Biases</p>
+                        <div class="tool-tags">
+                            <span class="tag">Production</span>
+                            <span class="tag">Tracking</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="../../pages/tools/ai-tools.html" class="tool-card">
+                    <div class="tool-logo">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Cloud Platforms</h3>
+                        <p>AWS SageMaker, Google AI, Azure ML</p>
+                        <div class="tool-tags">
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Deployment</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Related Careers -->
-    <section class="related-careers">
+    <!-- Project Ideas -->
+    <section class="project-ideas">
         <div class="container">
-            <h2 class="section-title">Related <span class="gradient-text">Career Paths</span></h2>
-            <div class="careers-grid">
-                <a href="#" class="career-card">
-                    <div class="career-icon">
-                        <i class="fas fa-robot"></i>
+            <h2 class="section-title">Hands-On <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">Build these projects to showcase your skills</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-difficulty beginner">Beginner</div>
+                    <h3>Sentiment Analysis Tool</h3>
+                    <p>Analyze text sentiment using NLP techniques</p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>NLTK</li>
+                        <li>Flask API</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-small">View Guide</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-difficulty intermediate">Intermediate</div>
+                    <h3>Image Classification App</h3>
+                    <p>Classify images using CNN with TensorFlow</p>
+                    <ul class="project-tech">
+                        <li>TensorFlow</li>
+                        <li>CNN</li>
+                        <li>Streamlit</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-small">View Guide</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-difficulty advanced">Advanced</div>
+                    <h3>Chatbot with GPT Integration</h3>
+                    <p>Build a chatbot using transformer models</p>
+                    <ul class="project-tech">
+                        <li>Transformers</li>
+                        <li>FastAPI</li>
+                        <li>Docker</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-small">View Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Paths -->
+    <section class="career-paths">
+        <div class="container">
+            <h2 class="section-title">AI Career <span class="gradient-text">Pathways</span></h2>
+            <p class="section-subtitle">Where this skill can take you</p>
+            
+            <div class="career-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">0-1 Year</div>
+                    <div class="timeline-content">
+                        <h3>Junior AI Engineer</h3>
+                        <p>Implement ML models, data preprocessing, basic NLP tasks</p>
+                        <div class="timeline-salary">$90k - $110k</div>
                     </div>
-                    <h3>Machine Learning Engineer</h3>
-                    <p>Build and deploy ML models at scale</p>
-                    <span class="career-salary">$145,000 avg</span>
-                </a>
-                <a href="#" class="career-card">
-                    <div class="career-icon">
-                        <i class="fas fa-language"></i>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2-4 Years</div>
+                    <div class="timeline-content">
+                        <h3>AI Engineer</h3>
+                        <p>Design ML pipelines, deploy models, optimize performance</p>
+                        <div class="timeline-salary">$120k - $160k</div>
                     </div>
-                    <h3>NLP Engineer</h3>
-                    <p>Work with language models and text data</p>
-                    <span class="career-salary">$135,000 avg</span>
-                </a>
-                <a href="#" class="career-card">
-                    <div class="career-icon">
-                        <i class="fas fa-eye"></i>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">5+ Years</div>
+                    <div class="timeline-content">
+                        <h3>Senior AI Engineer / ML Lead</h3>
+                        <p>Architect AI systems, lead teams, research new approaches</p>
+                        <div class="timeline-salary">$180k - $250k+</div>
                     </div>
-                    <h3>Computer Vision Engineer</h3>
-                    <p>Develop image and video recognition systems</p>
-                    <span class="career-salary">$140,000 avg</span>
-                </a>
-                <a href="#" class="career-card">
-                    <div class="career-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>AI Research Scientist</h3>
-                    <p>Advance AI algorithms and techniques</p>
-                    <span class="career-salary">$160,000 avg</span>
-                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="roadmap-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Your AI Journey Today</h2>
+                <p>Begin with our structured learning path and join thousands of successful AI engineers</p>
+                <div class="cta-buttons">
+                    <a href="#roadmapStages" class="btn btn-primary btn-large">
+                        <i class="fas fa-play"></i> Start Learning
+                    </a>
+                    <a href="../../pages/salary-explorer/index.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-chart-line"></i> Explore Salaries
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -150,123 +325,163 @@
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/roadmap.js"></script>
     <script>
-        // Load AI Engineer specific roadmap
-        async function loadAIRoadmap() {
+        // Load AI Engineer specific data
+        document.addEventListener('DOMContentLoaded', async function() {
             try {
                 const response = await fetch('../../data/skills.json');
                 const data = await response.json();
                 const aiSkill = data.skills.find(skill => skill.id === 'ai-engineer');
                 
-                if (aiSkill && aiSkill.roadmap) {
-                    displayRoadmap(aiSkill.roadmap);
+                if (aiSkill) {
+                    // Display roadmap
+                    displayRoadmap(aiSkill);
                     
-                    // Update progress based on localStorage
-                    updateProgress();
+                    // Initialize progress tracking
+                    initProgressTracking();
                 }
             } catch (error) {
                 console.error('Error loading roadmap:', error);
-                document.getElementById('roadmapStages').innerHTML = 
-                    '<div class="error-message">Error loading roadmap. Please try again later.</div>';
+            }
+            
+            // Add event listeners
+            document.getElementById('saveRoadmap').addEventListener('click', saveRoadmap);
+            document.getElementById('printRoadmap').addEventListener('click', () => window.print());
+            document.getElementById('shareRoadmap').addEventListener('click', shareRoadmap);
+        });
+        
+        function displayRoadmap(skill) {
+            const container = document.getElementById('roadmapStages');
+            
+            if (skill.roadmap && skill.roadmap.stages) {
+                container.innerHTML = skill.roadmap.stages.map((stage, stageIndex) => `
+                    <div class="stage">
+                        <div class="stage-header">
+                            <div class="stage-number">${stageIndex + 1}</div>
+                            <div class="stage-title">
+                                <h3>${stage.title}</h3>
+                                <p class="stage-subtitle">${stage.description}</p>
+                            </div>
+                        </div>
+                        <div class="stage-content">
+                            <div class="learning-items">
+                                ${stage.items.map((item, itemIndex) => `
+                                    <div class="learning-item" data-stage="${stageIndex}" data-item="${itemIndex}">
+                                        <div class="item-header">
+                                            <div class="item-title">
+                                                <h4>${item.title}</h4>
+                                                <span class="item-type">${item.type}</span>
+                                            </div>
+                                            <span class="item-difficulty ${'difficulty-' + item.difficulty.toLowerCase()}">
+                                                ${item.difficulty}
+                                            </span>
+                                        </div>
+                                        <p class="item-description">${item.description}</p>
+                                        <div class="item-resources">
+                                            ${item.resources.map(resource => `
+                                                <a href="${resource.url}" class="resource-link" target="_blank">
+                                                    <i class="fas fa-external-link-alt"></i> ${resource.title}
+                                                    ${resource.free ? '<span class="free-badge">Free</span>' : ''}
+                                                </a>
+                                            `).join('')}
+                                        </div>
+                                        <div class="item-actions">
+                                            <button class="btn btn-outline btn-small complete-item-btn">
+                                                <i class="far fa-check-circle"></i> Mark Complete
+                                            </button>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // Add completion functionality
+                document.querySelectorAll('.complete-item-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const item = this.closest('.learning-item');
+                        const isCompleted = item.classList.contains('completed');
+                        
+                        if (!isCompleted) {
+                            item.classList.add('completed');
+                            this.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                            this.classList.add('completed');
+                        } else {
+                            item.classList.remove('completed');
+                            this.innerHTML = '<i class="far fa-check-circle"></i> Mark Complete';
+                            this.classList.remove('completed');
+                        }
+                        
+                        updateProgress();
+                    });
+                });
+            } else {
+                container.innerHTML = `
+                    <div class="empty-roadmap">
+                        <i class="fas fa-road"></i>
+                        <h3>Roadmap Coming Soon</h3>
+                        <p>We're currently building this detailed roadmap. Check back soon!</p>
+                    </div>
+                `;
             }
         }
         
-        function displayRoadmap(roadmap) {
-            const container = document.getElementById('roadmapStages');
-            container.innerHTML = roadmap.stages.map((stage, index) => `
-                <div class="stage">
-                    <div class="stage-header">
-                        <div class="stage-number">${index + 1}</div>
-                        <div class="stage-title">
-                            <h3>${stage.title}</h3>
-                            <p class="stage-subtitle">${stage.description}</p>
-                        </div>
-                    </div>
-                    <div class="stage-content">
-                        <div class="learning-items">
-                            ${stage.items.map(item => `
-                                <div class="learning-item" data-completed="false">
-                                    <div class="item-header">
-                                        <div class="item-title">
-                                            <h4>${item.title}</h4>
-                                            <span class="item-type">${item.type}</span>
-                                        </div>
-                                        <span class="item-difficulty ${'difficulty-' + item.difficulty.toLowerCase()}">
-                                            ${item.difficulty}
-                                        </span>
-                                    </div>
-                                    <p class="item-description">${item.description}</p>
-                                    <div class="item-resources">
-                                        ${item.resources.map(resource => `
-                                            <a href="${resource.url}" class="resource-link" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> ${resource.title}
-                                            </a>
-                                        `).join('')}
-                                    </div>
-                                    <div class="item-actions">
-                                        <button class="btn btn-outline btn-small complete-item-btn">
-                                            <i class="far fa-check-circle"></i> Mark Complete
-                                        </button>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-            `).join('');
+        function initProgressTracking() {
+            // Load saved progress
+            const savedProgress = JSON.parse(localStorage.getItem('ai-engineer-progress')) || [];
             
-            // Add completion functionality
-            document.querySelectorAll('.complete-item-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const item = this.closest('.learning-item');
-                    const isCompleted = item.getAttribute('data-completed') === 'true';
-                    
-                    if (!isCompleted) {
-                        item.setAttribute('data-completed', 'true');
-                        this.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
-                        this.classList.add('completed');
-                        item.style.opacity = '0.7';
-                        
-                        // Update progress
-                        updateProgress();
-                    } else {
-                        item.setAttribute('data-completed', 'false');
-                        this.innerHTML = '<i class="far fa-check-circle"></i> Mark Complete';
-                        this.classList.remove('completed');
-                        item.style.opacity = '1';
-                        
-                        // Update progress
-                        updateProgress();
-                    }
-                });
+            // Mark completed items
+            savedProgress.forEach(itemId => {
+                const item = document.querySelector(`[data-item="${itemId}"]`);
+                if (item) {
+                    item.classList.add('completed');
+                    const btn = item.querySelector('.complete-item-btn');
+                    btn.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                    btn.classList.add('completed');
+                }
             });
+            
+            updateProgress();
         }
         
         function updateProgress() {
             const items = document.querySelectorAll('.learning-item');
-            const completedItems = document.querySelectorAll('.learning-item[data-completed="true"]');
+            const completedItems = document.querySelectorAll('.learning-item.completed');
             const progress = (completedItems.length / items.length) * 100;
             
             document.getElementById('progressFill').style.width = `${progress}%`;
+            document.getElementById('progressFill').textContent = `${Math.round(progress)}%`;
             
-            // Save progress to localStorage
-            const progressData = {
-                completed: Array.from(completedItems).map(item => 
-                    item.querySelector('h4').textContent
-                )
-            };
-            localStorage.setItem('ai-engineer-progress', JSON.stringify(progressData));
+            // Save progress
+            const completedIds = Array.from(completedItems).map(item => 
+                item.getAttribute('data-item')
+            );
+            localStorage.setItem('ai-engineer-progress', JSON.stringify(completedIds));
         }
         
-        // Load roadmap when page loads
-        document.addEventListener('DOMContentLoaded', loadAIRoadmap);
+        function saveRoadmap() {
+            const btn = document.getElementById('saveRoadmap');
+            const saved = btn.classList.contains('saved');
+            
+            if (!saved) {
+                btn.innerHTML = '<i class="fas fa-bookmark"></i> Saved';
+                btn.classList.add('saved');
+                showNotification('Roadmap saved to your profile!', 'success');
+                
+                // Add to saved skills
+                let savedSkills = JSON.parse(localStorage.getItem('savedSkills')) || [];
+                if (!savedSkills.includes('ai-engineer')) {
+                    savedSkills.push('ai-engineer');
+                    localStorage.setItem('savedSkills', JSON.stringify(savedSkills));
+                }
+            } else {
+                btn.innerHTML = '<i class="fas fa-bookmark"></i> Save Roadmap';
+                btn.classList.remove('saved');
+                showNotification('Roadmap removed from saved', 'info');
+            }
+        }
         
-        // Print functionality
-        document.getElementById('printRoadmap')?.addEventListener('click', function() {
-            window.print();
-        });
-        
-        // Share functionality
-        document.getElementById('shareRoadmap')?.addEventListener('click', function() {
+        function shareRoadmap() {
             if (navigator.share) {
                 navigator.share({
                     title: 'AI Engineer Roadmap',
@@ -275,12 +490,33 @@
                 });
             } else {
                 navigator.clipboard.writeText(window.location.href);
-                alert('Link copied to clipboard!');
+                showNotification('Link copied to clipboard!', 'success');
             }
-        });
+        }
+        
+        function showNotification(message, type) {
+            // Notification implementation
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
     </script>
 </body>
 </html>
+
 
 
 
