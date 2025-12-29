@@ -1,1 +1,122 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Salary Explorer 2024 | Compare Salaries | UrbanOraTech</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Compare tech salaries by role, experience, and location. Real-time data for AI Engineers, Web Developers, Data Scientists, and more.">
+    <meta name="keywords" content="tech salaries, salary comparison, developer salary, ai engineer salary, data scientist salary, tech jobs salary">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/salary.css">
+    
+    <!-- Charts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero -->
+    <section class="salary-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tech Salary <span class="gradient-text">Explorer</span></h1>
+                <p>Compare real-time tech salaries by role, experience level, and location. Make informed career decisions.</p>
+                
+                <div class="salary-search">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="roleSearch" placeholder="Search roles (e.g., AI Engineer, Web Developer)">
+                    </div>
+                    <button class="btn btn-primary" id="searchBtn">
+                        <i class="fas fa-chart-line"></i> Analyze
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>$140k</h3>
+                    <p>Avg AI Engineer Salary</p>
+                </div>
+                <div class="stat">
+                    <h3>32%</h3>
+                    <p>Highest Growth Rate</p>
+                </div>
+                <div class="stat">
+                    <h3>100k+</h3>
+                    <p>Job Openings Analyzed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="salary-filters">
+        <div class="container">
+            <div class="filter-section">
+                <h3>Filter by:</h3>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="experienceFilter">Experience Level</label>
+                        <select id="experienceFilter" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="entry">Entry Level (0-2 yrs)</option>
+                            <option value="mid">Mid Level (3-5 yrs)</option>
+                            <option value="senior">Senior (6+ yrs)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="locationFilter">Location</label>
+                        <select id="locationFilter" class="filter-select">
+                            <option value="global">Global Average</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="eu">Europe</option>
+                            <option value="india">India</option>
+                            <option value="remote">Remote</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="categoryFilter">Skill Category</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="data">Data Science</option>
+                            <option value="cyber">Cybersecurity</option>
+                            <option value="cloud">Cloud & DevOps</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salary Comparison -->
+    <section class="salary-comparison">
+        <div class="container">
+            <h2 class="section-title">Salary <span class="gradient-text">Comparison</span></h2>
+            <p class="section-subtitle">Compare average salaries across different tech roles</p>
+            
+            <div class="comparison-chart
+
+
