@@ -1,1 +1,54 @@
 
+
+
+{
+  "categories": [
+    {
+      "id": "ai-tools",
+      "name": "AI & Machine Learning",
+      "description": "Tools for AI development, machine learning, and data science",
+      "tools": [
+        {
+          "id": "tensorflow",
+          "name": "TensorFlow",
+          "description": "Open-source platform for machine learning",
+          "category": "Framework",
+          "pricing": "Free",
+          "url": "https://www.tensorflow.org/",
+          "features": ["Deep Learning", "Neural Networks", "Python", "Mobile"],
+          "difficulty": "Advanced"
+        },
+        {
+          "id": "pytorch",
+          "name": "PyTorch",
+          "description": "Python-based scientific computing package",
+          "category": "Framework",
+          "pricing": "Free",
+          "url": "https://pytorch.org/",
+          "features": ["Dynamic Graphs", "Research Focus", "Python", "GPU Support"],
+          "difficulty": "Intermediate"
+        }
+      ]
+    },
+    {
+      "id": "coding-tools",
+      "name": "Coding & Development",
+      "description": "IDEs, code editors, and development tools",
+      "tools": [
+        {
+          "id": "vscode",
+          "name": "Visual Studio Code",
+          "description": "Free source-code editor with extensions",
+          "category": "Code Editor",
+          "pricing": "Free",
+          "url": "https://code.visualstudio.com/",
+          "features": ["Extensions", "Debugging", "Git Integration", "Multi-language"],
+          "difficulty": "Beginner"
+        }
+      ]
+    }
+  ]
+}
+
+
+
