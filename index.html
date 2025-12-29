@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanOraTech - Future Skills & Smart Careers</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
 
+<!-- Header -->
+<div id="header"></div>
+<script>
+fetch('/components/header.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('header').innerHTML = data);
+</script>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1>Future Skills That Pay. Careers That Last.</h1>
+      <p>Discover the high-paying tech skills, tools, and career paths of tomorrow.</p>
+      <a href="/pages/skills/index.html" class="btn-primary">Explore Skills</a>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/images/hero/hero-img.png" alt="Future Skills">
+    </div>
+  </div>
+</section>
+
+<!-- Trending Skills Section -->
+<section class="trending-skills">
+  <div class="container">
+    <h2>Trending Skills</h2>
+    <div class="skills-grid">
+      <a href="/pages/skills/ai-engineer.html" class="skill-card">
+        <img src="/assets/images/skills/ai.png" alt="AI Engineer">
+        <h3>AI Engineer</h3>
+        <p>Learn AI from scratch and build smart systems.</p>
+      </a>
+      <a href="/pages/skills/web-developer.html" class="skill-card">
+        <img src="/assets/images/skills/web.png" alt="Web Developer">
+        <h3>Web Developer</h3>
+        <p>Master web technologies and build responsive websites.</p>
+      </a>
+      <a href="/pages/skills/data-analyst.html" class="skill-card">
+        <img src="/assets/images/skills/data.png" alt="Data Analyst">
+        <h3>Data Analyst</h3>
+        <p>Analyze data and make smart business decisions.</p>
+      </a>
+      <a href="/pages/skills/cybersecurity.html" class="skill-card">
+        <img src="/assets/images/skills/cyber.png" alt="Cybersecurity">
+        <h3>Cybersecurity</h3>
+        <p>Protect systems and networks from cyber threats.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Salary Snapshot Section -->
+<section class="salary-snapshot">
+  <div class="container">
+    <h2>Salary Snapshot</h2>
+    <p>See how much professionals earn in top tech careers.</p>
+    <div class="salary-cards">
+      <div class="salary-card">
+        <h3>AI Engineer</h3>
+        <p>Avg Salary: $120k/year</p>
+      </div>
+      <div class="salary-card">
+        <h3>Web Developer</h3>
+        <p>Avg Salary: $75k/year</p>
+      </div>
+      <div class="salary-card">
+        <h3>Data Analyst</h3>
+        <p>Avg Salary: $80k/year</p>
+      </div>
+      <div class="salary-card">
+        <h3>Cybersecurity</h3>
+        <p>Avg Salary: $95k/year</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Tools Section -->
+<section class="popular-tools">
+  <div class="container">
+    <h2>Popular Tools</h2>
+    <div class="tools-grid">
+      <a href="/pages/tools/ai-tools.html" class="tool-card">
+        <h3>AI Tools</h3>
+      </a>
+      <a href="/pages/tools/coding-tools.html" class="tool-card">
+        <h3>Coding Tools</h3>
+      </a>
+      <a href="/pages/tools/design-tools.html" class="tool-card">
+        <h3>Design Tools</h3>
+      </a>
+      <a href="/pages/tools/productivity-tools.html" class="tool-card">
+        <h3>Productivity Tools</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Blogs Section -->
+<section class="latest-blogs">
+  <div class="container">
+    <h2>Latest Articles</h2>
+    <div class="blog-grid">
+      <a href="/pages/blogs/best-skills-2025.html" class="blog-card">
+        <img src="/assets/images/blog/best-skills.jpg" alt="Best Skills 2025">
+        <h3>Best Skills to Learn in 2025</h3>
+      </a>
+      <a href="/pages/blogs/ai-skills-for-students.html" class="blog-card">
+        <img src="/assets/images/blog/ai-students.jpg" alt="AI Skills for Students">
+        <h3>AI Skills for Students</h3>
+      </a>
+      <a href="/pages/blogs/tech-without-degree.html" class="blog-card">
+        <img src="/assets/images/blog/tech-without-degree.jpg" alt="Tech Without Degree">
+        <h3>Tech Careers Without a Degree</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer"></div>
+<script>
+fetch('/components/footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
