@@ -1,1 +1,63 @@
 
+
+
+{
+  "skills": [
+    {
+      "id": "ai-engineer",
+      "title": "AI Engineer",
+      "category": "ai-ml",
+      "icon": "fas fa-brain",
+      "description": "Master machine learning, deep learning, and AI model deployment to build intelligent systems.",
+      "tags": ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "NLP"],
+      "difficulty": "Advanced",
+      "duration": "12-18 months",
+      "avgSalary": "$140,000",
+      "growth": "32%",
+      "roadmap": {
+        "stages": [
+          {
+            "title": "Foundations",
+            "description": "Build mathematical and programming foundations",
+            "items": [
+              {
+                "title": "Python Programming",
+                "type": "Course",
+                "difficulty": "Beginner",
+                "description": "Learn Python basics and libraries like NumPy, Pandas",
+                "resources": [
+                  {"title": "Python Crash Course", "url": "#"},
+                  {"title": "NumPy Tutorial", "url": "#"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "web-developer",
+      "title": "Full-Stack Web Developer",
+      "category": "web-dev",
+      "icon": "fas fa-code",
+      "description": "Build modern web applications with frontend and backend technologies.",
+      "tags": ["JavaScript", "React", "Node.js", "MongoDB", "APIs"],
+      "difficulty": "Intermediate",
+      "duration": "9-12 months",
+      "avgSalary": "$95,000",
+      "growth": "23%",
+      "roadmap": {
+        "stages": [
+          {
+            "title": "Frontend Fundamentals",
+            "description": "Master HTML, CSS, and JavaScript",
+            "items": []
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+
