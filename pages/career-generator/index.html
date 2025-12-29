@@ -1,1 +1,308 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Career Path Generator | Find Your Path | UrbanOraTech</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Find your perfect tech career path. Answer a few questions and get a personalized roadmap to your dream tech job.">
+    <meta name="keywords" content="career path, tech career, career quiz, find tech job, career generator, tech roadmap">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/career-generator.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero -->
+    <section class="career-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your <span class="gradient-text">Tech Career Path</span></h1>
+                <p>Answer a few questions and get a personalized roadmap to your dream tech job.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-user-check"></i>
+                        <div class="stat-content">
+                            <h3>15,000+</h3>
+                            <p>Career Paths Generated</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-content">
+                            <h3>94%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-content">
+                            <h3>3 Min</h3>
+                            <p>Average Time</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#generator" class="btn btn-primary btn-large">
+                    <i class="fas fa-play"></i> Start Generator
+                </a>
+            </div>
+            
+            <div class="hero-illustration">
+                <div class="path-visual">
+                    <div class="path-node active">
+                        <i class="fas fa-user"></i>
+                        <span>You</span>
+                    </div>
+                    <div class="path-line"></div>
+                    <div class="path-node">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Questions</span>
+                    </div>
+                    <div class="path-line"></div>
+                    <div class="path-node">
+                        <i class="fas fa-road"></i>
+                        <span>Roadmap</span>
+                    </div>
+                    <div class="path-line"></div>
+                    <div class="path-node">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Career</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Generator -->
+    <section class="career-generator" id="generator">
+        <div class="container">
+            <div class="generator-container">
+                <!-- Progress Bar -->
+                <div class="generator-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">7</span></span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+                
+                <!-- Question Container -->
+                <div class="question-container" id="questionContainer">
+                    <!-- Questions will be loaded here -->
+                </div>
+                
+                <!-- Navigation -->
+                <div class="question-navigation">
+                    <button class="btn btn-outline" id="prevBtn" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary" id="nextBtn">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="skipBtn" style="display: none;">
+                        Skip to Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Results (Hidden until generated) -->
+    <section class="career-results" id="resultsSection" style="display: none;">
+        <div class="container">
+            <div class="results-header">
+                <h2>Your Personalized <span class="gradient-text">Career Path</span></h2>
+                <p>Based on your answers, here's your recommended tech career path</p>
+            </div>
+            
+            <div class="result-card">
+                <div class="result-role">
+                    <div class="role-icon">
+                        <i class="fas fa-brain" id="resultIcon"></i>
+                    </div>
+                    <div class="role-details">
+                        <h3 id="resultTitle">AI Engineer</h3>
+                        <div class="role-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                Avg Salary: <span id="resultSalary">$140,000</span>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                Growth: <span id="resultGrowth">32%</span>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                Timeline: <span id="resultTimeline">12-18 months</span>
+                            </span>
+                        </div>
+                        <p id="resultDescription">Master machine learning, deep learning, and AI model deployment to build intelligent systems.</p>
+                    </div>
+                </div>
+                
+                <div class="result-match">
+                    <div class="match-score">
+                        <div class="score-circle">
+                            <span id="matchPercent">85%</span>
+                        </div>
+                        <p>Match Score</p>
+                    </div>
+                    <div class="match-reasons">
+                        <h4>Why this path fits you:</h4>
+                        <ul id="matchReasons">
+                            <li>Matches your interest in problem-solving</li>
+                            <li>Aligns with your analytical thinking style</li>
+                            <li>High demand matches your career goals</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="result-roadmap">
+                    <h3>Your Learning Roadmap</h3>
+                    <div class="roadmap-steps">
+                        <div class="roadmap-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Foundation (Months 1-3)</h4>
+                                <p>Learn Python, Mathematics, and Data Analysis basics</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Machine Learning (Months 4-8)</h4>
+                                <p>Master ML algorithms, Scikit-learn, and model evaluation</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Deep Learning (Months 9-12)</h4>
+                                <p>Learn Neural Networks, TensorFlow, and Computer Vision</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Projects & Portfolio (Months 13-18)</h4>
+                                <p>Build projects, contribute to open source, prepare for interviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <a href="../skills/ai-engineer.html" class="btn btn-primary btn-large" id="viewRoadmapBtn">
+                        <i class="fas fa-road"></i> View Detailed Roadmap
+                    </a>
+                    <button class="btn btn-secondary btn-large" id="savePathBtn">
+                        <i class="fas fa-bookmark"></i> Save This Path
+                    </button>
+                    <button class="btn btn-outline btn-large" id="restartBtn">
+                        <i class="fas fa-redo"></i> Try Again
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Alternative Paths -->
+            <div class="alternative-paths">
+                <h3>Alternative Career Paths</h3>
+                <div class="alternatives-grid" id="alternativesGrid">
+                    <!-- Alternative paths will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="career-testimonials">
+        <div class="container">
+            <h2 class="section-title">Success <span class="gradient-text">Stories</span></h2>
+            <p class="section-subtitle">See how others found their tech career path</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The career generator helped me transition from marketing to web development. The roadmap was spot-on!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <span>Frontend Developer at Google</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a recent graduate, I was confused about which tech path to choose. This tool gave me clear direction."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <span>Data Scientist at Amazon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"After 5 years in support, I used the generator to switch to cybersecurity. Best career decision ever!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Jessica Wang</h4>
+                            <span>Security Analyst at Microsoft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="career-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Tech Journey?</h2>
+                <p>Join thousands who found their perfect tech career with our generator</p>
+                <a href="#generator" class="btn btn-primary btn-large">
+                    <i class="fas fa-play"></i> Find Your Path Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/career-generator.js"></script>
+</body>
+</html>
+
+
