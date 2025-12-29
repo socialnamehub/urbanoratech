@@ -1,0 +1,286 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Roadmap | UrbanOraTech</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Complete AI Engineer learning roadmap: Machine Learning, Deep Learning, NLP, Computer Vision, and AI deployment.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/roadmap.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <!-- Roadmap Header -->
+    <section class="roadmap-header">
+        <div class="container">
+            <div class="skill-header-content">
+                <div class="skill-header-main">
+                    <div class="skill-icon-large">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="skill-header-text">
+                        <h1>AI Engineer Roadmap</h1>
+                        <p class="skill-subtitle">Master Machine Learning, Deep Learning, and AI deployment to build intelligent systems</p>
+                        <div class="skill-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-clock"></i> Duration: 12-18 months
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-signal"></i> Level: Advanced
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-dollar-sign"></i> Avg Salary: $140,000
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-chart-line"></i> Growth: 32%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-actions-header">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-bookmark"></i> Save Roadmap
+                    </button>
+                    <button class="btn btn-secondary" id="printRoadmap">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                    <button class="btn btn-outline" id="shareRoadmap">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                </div>
+            </div>
+            
+            <div class="roadmap-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Beginner</span>
+                    <span>Intermediate</span>
+                    <span>Advanced</span>
+                    <span>Expert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Content -->
+    <section class="roadmap-content">
+        <div class="container">
+            <div class="roadmap-stages" id="roadmapStages">
+                <!-- Stages will be loaded dynamically -->
+                <div class="loading">Loading roadmap...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Tools -->
+    <section class="recommended-tools">
+        <div class="container">
+            <h2 class="section-title">Essential <span class="gradient-text">AI Tools</span></h2>
+            <div class="tools-grid" id="aiToolsGrid">
+                <!-- Tools will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Careers -->
+    <section class="related-careers">
+        <div class="container">
+            <h2 class="section-title">Related <span class="gradient-text">Career Paths</span></h2>
+            <div class="careers-grid">
+                <a href="#" class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Machine Learning Engineer</h3>
+                    <p>Build and deploy ML models at scale</p>
+                    <span class="career-salary">$145,000 avg</span>
+                </a>
+                <a href="#" class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>NLP Engineer</h3>
+                    <p>Work with language models and text data</p>
+                    <span class="career-salary">$135,000 avg</span>
+                </a>
+                <a href="#" class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision Engineer</h3>
+                    <p>Develop image and video recognition systems</p>
+                    <span class="career-salary">$140,000 avg</span>
+                </a>
+                <a href="#" class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>AI Research Scientist</h3>
+                    <p>Advance AI algorithms and techniques</p>
+                    <span class="career-salary">$160,000 avg</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/roadmap.js"></script>
+    <script>
+        // Load AI Engineer specific roadmap
+        async function loadAIRoadmap() {
+            try {
+                const response = await fetch('../../data/skills.json');
+                const data = await response.json();
+                const aiSkill = data.skills.find(skill => skill.id === 'ai-engineer');
+                
+                if (aiSkill && aiSkill.roadmap) {
+                    displayRoadmap(aiSkill.roadmap);
+                    
+                    // Update progress based on localStorage
+                    updateProgress();
+                }
+            } catch (error) {
+                console.error('Error loading roadmap:', error);
+                document.getElementById('roadmapStages').innerHTML = 
+                    '<div class="error-message">Error loading roadmap. Please try again later.</div>';
+            }
+        }
+        
+        function displayRoadmap(roadmap) {
+            const container = document.getElementById('roadmapStages');
+            container.innerHTML = roadmap.stages.map((stage, index) => `
+                <div class="stage">
+                    <div class="stage-header">
+                        <div class="stage-number">${index + 1}</div>
+                        <div class="stage-title">
+                            <h3>${stage.title}</h3>
+                            <p class="stage-subtitle">${stage.description}</p>
+                        </div>
+                    </div>
+                    <div class="stage-content">
+                        <div class="learning-items">
+                            ${stage.items.map(item => `
+                                <div class="learning-item" data-completed="false">
+                                    <div class="item-header">
+                                        <div class="item-title">
+                                            <h4>${item.title}</h4>
+                                            <span class="item-type">${item.type}</span>
+                                        </div>
+                                        <span class="item-difficulty ${'difficulty-' + item.difficulty.toLowerCase()}">
+                                            ${item.difficulty}
+                                        </span>
+                                    </div>
+                                    <p class="item-description">${item.description}</p>
+                                    <div class="item-resources">
+                                        ${item.resources.map(resource => `
+                                            <a href="${resource.url}" class="resource-link" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> ${resource.title}
+                                            </a>
+                                        `).join('')}
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="btn btn-outline btn-small complete-item-btn">
+                                            <i class="far fa-check-circle"></i> Mark Complete
+                                        </button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add completion functionality
+            document.querySelectorAll('.complete-item-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const item = this.closest('.learning-item');
+                    const isCompleted = item.getAttribute('data-completed') === 'true';
+                    
+                    if (!isCompleted) {
+                        item.setAttribute('data-completed', 'true');
+                        this.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                        this.classList.add('completed');
+                        item.style.opacity = '0.7';
+                        
+                        // Update progress
+                        updateProgress();
+                    } else {
+                        item.setAttribute('data-completed', 'false');
+                        this.innerHTML = '<i class="far fa-check-circle"></i> Mark Complete';
+                        this.classList.remove('completed');
+                        item.style.opacity = '1';
+                        
+                        // Update progress
+                        updateProgress();
+                    }
+                });
+            });
+        }
+        
+        function updateProgress() {
+            const items = document.querySelectorAll('.learning-item');
+            const completedItems = document.querySelectorAll('.learning-item[data-completed="true"]');
+            const progress = (completedItems.length / items.length) * 100;
+            
+            document.getElementById('progressFill').style.width = `${progress}%`;
+            
+            // Save progress to localStorage
+            const progressData = {
+                completed: Array.from(completedItems).map(item => 
+                    item.querySelector('h4').textContent
+                )
+            };
+            localStorage.setItem('ai-engineer-progress', JSON.stringify(progressData));
+        }
+        
+        // Load roadmap when page loads
+        document.addEventListener('DOMContentLoaded', loadAIRoadmap);
+        
+        // Print functionality
+        document.getElementById('printRoadmap')?.addEventListener('click', function() {
+            window.print();
+        });
+        
+        // Share functionality
+        document.getElementById('shareRoadmap')?.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'AI Engineer Roadmap',
+                    text: 'Check out this comprehensive AI Engineer learning roadmap on UrbanOraTech',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
