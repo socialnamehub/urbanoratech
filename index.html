@@ -1,141 +1,226 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UrbanOraTech - Future Skills & Smart Careers</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanOraTech | Future Skills & Smart Careers Hub</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Master future-ready skills, explore tech careers, and access smart tools for the digital age. Your hub for AI, Web Development, Data Science & more.">
+    <meta name="keywords" content="tech skills, career roadmap, AI learning, web development, data science, future jobs">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
 </head>
 <body>
+    <!-- Navigation will be loaded dynamically -->
+    <div id="navbar-container"></div>
 
-<!-- Header -->
-<div id="header"></div>
-<script>
-fetch('/components/header.html')
-  .then(res => res.text())
-  .then(data => document.getElementById('header').innerHTML = data);
-</script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Future Skills</span> for
+                    <span class="gradient-text">Smart Careers</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Master in-demand tech skills with guided roadmaps, explore career paths, 
+                    and access cutting-edge tools. Your journey to tomorrow's jobs starts here.
+                </p>
+                <div class="hero-buttons">
+                    <a href="pages/skills/index.html" class="btn btn-primary">
+                        <i class="fas fa-road"></i> Explore Skills Roadmaps
+                    </a>
+                    <a href="pages/career-generator/index.html" class="btn btn-secondary">
+                        <i class="fas fa-bolt"></i> Find Your Career Path
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Skills Roadmaps</p>
+                    </div>
+                    <div class="stat">
+                        <h3>200+</h3>
+                        <p>Tools & Resources</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15k+</h3>
+                        <p>Career Paths Generated</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="float-element el1">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Engineer</span>
+                    </div>
+                    <div class="float-element el2">
+                        <i class="fas fa-code"></i>
+                        <span>Web Dev</span>
+                    </div>
+                    <div class="float-element el3">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Science</span>
+                    </div>
+                    <div class="float-element el4">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Cyber Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container hero-container">
-    <div class="hero-text">
-      <h1>Future Skills That Pay. Careers That Last.</h1>
-      <p>Discover the high-paying tech skills, tools, and career paths of tomorrow.</p>
-      <a href="/pages/skills/index.html" class="btn-primary">Explore Skills</a>
-    </div>
-    <div class="hero-image">
-      <img src="/assets/images/hero/hero-img.png" alt="Future Skills">
-    </div>
-  </div>
-</section>
+    <!-- Featured Skills -->
+    <section class="featured-skills">
+        <div class="container">
+            <h2 class="section-title">Top <span class="gradient-text">In-Demand</span> Skills</h2>
+            <p class="section-subtitle">Start learning with our structured roadmaps</p>
+            
+            <div class="skills-grid" id="featured-skills">
+                <!-- Skills will be loaded dynamically -->
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/skills/index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-right"></i> View All Skills
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Trending Skills Section -->
-<section class="trending-skills">
-  <div class="container">
-    <h2>Trending Skills</h2>
-    <div class="skills-grid">
-      <a href="/pages/skills/ai-engineer.html" class="skill-card">
-        <img src="/assets/images/skills/ai.png" alt="AI Engineer">
-        <h3>AI Engineer</h3>
-        <p>Learn AI from scratch and build smart systems.</p>
-      </a>
-      <a href="/pages/skills/web-developer.html" class="skill-card">
-        <img src="/assets/images/skills/web.png" alt="Web Developer">
-        <h3>Web Developer</h3>
-        <p>Master web technologies and build responsive websites.</p>
-      </a>
-      <a href="/pages/skills/data-analyst.html" class="skill-card">
-        <img src="/assets/images/skills/data.png" alt="Data Analyst">
-        <h3>Data Analyst</h3>
-        <p>Analyze data and make smart business decisions.</p>
-      </a>
-      <a href="/pages/skills/cybersecurity.html" class="skill-card">
-        <img src="/assets/images/skills/cyber.png" alt="Cybersecurity">
-        <h3>Cybersecurity</h3>
-        <p>Protect systems and networks from cyber threats.</p>
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Your <span class="gradient-text">Learning Journey</span></h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Skill</h3>
+                        <p>Select from AI, Web Development, Data Science, Cybersecurity, and more future-ready skills.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Follow the Roadmap</h3>
+                        <p>Get a structured learning path with resources, projects, and milestones.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Explore Tools</h3>
+                        <p>Access curated tools and resources to accelerate your learning and projects.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Land Your Dream Job</h3>
+                        <p>Get salary insights, interview tips, and career path guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Salary Snapshot Section -->
-<section class="salary-snapshot">
-  <div class="container">
-    <h2>Salary Snapshot</h2>
-    <p>See how much professionals earn in top tech careers.</p>
-    <div class="salary-cards">
-      <div class="salary-card">
-        <h3>AI Engineer</h3>
-        <p>Avg Salary: $120k/year</p>
-      </div>
-      <div class="salary-card">
-        <h3>Web Developer</h3>
-        <p>Avg Salary: $75k/year</p>
-      </div>
-      <div class="salary-card">
-        <h3>Data Analyst</h3>
-        <p>Avg Salary: $80k/year</p>
-      </div>
-      <div class="salary-card">
-        <h3>Cybersecurity</h3>
-        <p>Avg Salary: $95k/year</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Tools Preview -->
+    <section class="tools-preview">
+        <div class="container">
+            <h2 class="section-title">Essential <span class="gradient-text">Tech Tools</span></h2>
+            <p class="section-subtitle">Curated tools for every stage of your journey</p>
+            
+            <div class="tools-categories">
+                <a href="pages/tools/ai-tools.html" class="tool-category">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>Machine Learning, NLP, Computer Vision</p>
+                </a>
+                
+                <a href="pages/tools/coding-tools.html" class="tool-category">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Coding Tools</h3>
+                    <p>IDEs, Frameworks, DevOps</p>
+                </a>
+                
+                <a href="pages/tools/design-tools.html" class="tool-category">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design Tools</h3>
+                    <p>UI/UX, Prototyping, Graphics</p>
+                </a>
+                
+                <a href="pages/tools/productivity-tools.html" class="tool-category">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Productivity</h3>
+                    <p>Project Management, Collaboration</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Popular Tools Section -->
-<section class="popular-tools">
-  <div class="container">
-    <h2>Popular Tools</h2>
-    <div class="tools-grid">
-      <a href="/pages/tools/ai-tools.html" class="tool-card">
-        <h3>AI Tools</h3>
-      </a>
-      <a href="/pages/tools/coding-tools.html" class="tool-card">
-        <h3>Coding Tools</h3>
-      </a>
-      <a href="/pages/tools/design-tools.html" class="tool-card">
-        <h3>Design Tools</h3>
-      </a>
-      <a href="/pages/tools/productivity-tools.html" class="tool-card">
-        <h3>Productivity Tools</h3>
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- Latest Blogs -->
+    <section class="latest-blogs">
+        <div class="container">
+            <h2 class="section-title">Latest <span class="gradient-text">Insights</span></h2>
+            <p class="section-subtitle">Stay updated with tech trends and career advice</p>
+            
+            <div class="blogs-grid" id="featured-blogs">
+                <!-- Blogs will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
 
-<!-- Latest Blogs Section -->
-<section class="latest-blogs">
-  <div class="container">
-    <h2>Latest Articles</h2>
-    <div class="blog-grid">
-      <a href="/pages/blogs/best-skills-2025.html" class="blog-card">
-        <img src="/assets/images/blog/best-skills.jpg" alt="Best Skills 2025">
-        <h3>Best Skills to Learn in 2025</h3>
-      </a>
-      <a href="/pages/blogs/ai-skills-for-students.html" class="blog-card">
-        <img src="/assets/images/blog/ai-students.jpg" alt="AI Skills for Students">
-        <h3>AI Skills for Students</h3>
-      </a>
-      <a href="/pages/blogs/tech-without-degree.html" class="blog-card">
-        <img src="/assets/images/blog/tech-without-degree.jpg" alt="Tech Without Degree">
-        <h3>Tech Careers Without a Degree</h3>
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Future-Proof Your Career?</h2>
+                <p>Join thousands of learners building tomorrow's skills today</p>
+                <a href="pages/skills/index.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-play"></i> Start Learning Now
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<div id="footer"></div>
-<script>
-fetch('/components/footer.html')
-  .then(res => res.text())
-  .then(data => document.getElementById('footer').innerHTML = data);
-</script>
+    <!-- Footer will be loaded dynamically -->
+    <div id="footer-container"></div>
 
-<script src="/assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>
+
+
+
+
